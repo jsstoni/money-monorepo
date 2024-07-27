@@ -32,4 +32,5 @@ module.exports = {
       },
     },
   },
+  ignorePatterns: [".turbo", "node_modules", "dist"],
 };

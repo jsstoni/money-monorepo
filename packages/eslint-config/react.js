@@ -1,45 +1,13 @@
-const { resolve } = require("node:path");
-
-const project = resolve(process.cwd(), "tsconfig.json");
-
-/*
- * This is a custom ESLint configuration for use a library
- * that utilizes React.
- *
- * This config extends the Vercel Engineering Style Guide.
- * For more information, see https://github.com/vercel/style-guide
- *
- */
-
 module.exports = {
-  extends: ["eslint:recommended", "prettier", "eslint-config-turbo"],
-  parserOptions: {
-    project,
-  },
-  globals: {
-    JSX: true,
+  extends: ["@repo/eslint-config"],
+  plugins: ["react", "react-hooks"],
+  rules: {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": ["warn", { extensions: [".tsx"] }],
   },
   settings: {
-    "import/resolver": {
-      typescript: {
-        project,
-      },
-      node: {
-        extensions: [".mjs", ".js", ".jsx", ".ts", ".tsx"],
-      },
+    react: {
+      version: "detect",
     },
   },
-  ignorePatterns: ["node_modules/", "dist/", ".eslintrc.js", "**/*.css"],
-  // add rules configurations here
-  rules: {
-    "import/no-default-export": "off",
-  },
-  overrides: [
-    {
-      files: ["*.config.js"],
-      env: {
-        node: true,
-      },
-    },
-  ],
 };

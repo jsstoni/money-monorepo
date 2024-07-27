@@ -10,16 +10,8 @@ const __dirname = dirname(__filename);
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    alias: [
-      {
-        find: "./runtimeConfig",
-        replacement: "./runtimeConfig.browser",
-      },
-      // Reference: https://github.com/vercel/turbo/discussions/620#discussioncomment-2136195
-      {
-        find: "@ui",
-        replacement: path.resolve(__dirname, "../../packages/ui/src"),
-      },
-    ],
+    alias: {
+      "@ui": path.resolve(__dirname, "../../packages/ui/src"),
+    },
   },
 });

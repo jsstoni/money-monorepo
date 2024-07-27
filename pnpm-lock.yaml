@@ -27,7 +27,7 @@ importers:
         specifier: 2.0.9
         version: 2.0.9
 
-  apps/vite:
+  apps/web:
     dependencies:
       '@repo/ui':
         specifier: workspace:*
@@ -134,6 +134,12 @@ importers:
       lucide-react:
         specifier: ^0.416.0
         version: 0.416.0(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
       tailwind-merge:
         specifier: ^2.4.0
         version: 2.4.0

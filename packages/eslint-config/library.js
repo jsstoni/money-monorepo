@@ -1,5 +1,4 @@
 const path = require("node:path");
-const { env } = require("node:process");
 
 const project = path.resolve(process.cwd(), "tsconfig.json");
 

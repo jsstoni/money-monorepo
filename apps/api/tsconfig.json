@@ -5,8 +5,10 @@
     "outDir": "dist",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "esModuleInterop": true,
+    "resolveJsonModule": true
   },
-  "include": ["src/**/*.ts", ".eslintrc.cjs"],
-  "exclude": ["node_modules", "dist", ".turbo"]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }

@@ -32,5 +32,5 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: [".turbo", "node_modules", "dist"],
+  ignorePatterns: [".turbo", "node_modules", "dist", ".eslintrc.cjs"],
 };

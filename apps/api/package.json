@@ -2,6 +2,7 @@
   "name": "api",
   "version": "0.1.0",
   "type": "module",
+  "license": "MIT",
   "scripts": {
     "build": "tsc && tsc-alias",
     "build:watch": "tsc && (concurrently \"tsc -w\" \"tsc-alias -w\")",
